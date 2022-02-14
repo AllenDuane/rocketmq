@@ -91,7 +91,9 @@ public class ClientConfig {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
-
+    /**
+    * Duan/如果没有命名Instance，则加上进程ID
+    */
     public void changeInstanceNameToPID() {
         if (this.instanceName.equals("DEFAULT")) {
             this.instanceName = String.valueOf(UtilAll.getPid());
