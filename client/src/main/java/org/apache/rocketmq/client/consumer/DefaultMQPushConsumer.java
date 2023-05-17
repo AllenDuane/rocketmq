@@ -712,7 +712,7 @@ public class DefaultMQPushConsumer extends ClientConfig implements MQPushConsume
     public void shutdown() {
         this.defaultMQPushConsumerImpl.shutdown(awaitTerminationMillisWhenShutdown);
         if (null != traceDispatcher) {
-            traceDispatcher.shutdown();
+             traceDispatcher.shutdown();
         }
     }
 

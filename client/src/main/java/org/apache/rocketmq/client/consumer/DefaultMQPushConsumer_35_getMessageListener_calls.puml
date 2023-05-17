@@ -1,0 +1,349 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer#getMessageListener()",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1411517106 { 
+   	label=apache
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1714486248 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1115057354 { 
+   	label=SqlFilterConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   SqlFilterConsumer819045724XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="SqlFilterConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1195812458 { 
+   	label=TagFilterConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TagFilterConsumer819045724XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="TagFilterConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1590985330 { 
+   	label=PushConsumerWithNamespace
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PushConsumerWithNamespace1679326985XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerWithNamespace
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_160577077 { 
+   	label=Consumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Consumer2031561881XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Consumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2004609280 { 
+   	label=DefaultMQPushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumer633216551XXXgetMessageListener0[
+	label="+ getMessageListener()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  This method gets internal infrastructure readily to serve. Instances must call this method after configuration.&#10; &#10;  @throws MQClientException if there is any client error.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_290650472 { 
+   	label=DefaultMQPushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumerImpl1317777407XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_325102424 { 
+   	label=PushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PushConsumer1191250838XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_330370686 { 
+   	label=MonitorService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MonitorService2000019609XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="MonitorService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_425376580 { 
+   	label=ResponseConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ResponseConsumer196752767XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="ResponseConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_877673347 { 
+   	label=AclClient
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   AclClient1191250838XXXpushConsumer0[
+	label="+ pushConsumer()"
+	style=filled
+	fillcolor=white
+	tooltip="AclClient
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_950274803 { 
+   	label=TracePushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TracePushConsumer244193786XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="TracePushConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+subgraph cluster_679248890 { 
+   	label=openmessaging
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1292383980 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1112861134 { 
+   	label=PushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PushConsumerImpl725268464XXXstartup0[
+	label="+ startup()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+AclClient1191250838XXXpushConsumer0 -> DefaultMQPushConsumer633216551XXXstart0;
+Consumer1014534777XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+Consumer1268842237XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+Consumer2031561881XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+Consumer382608349XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+DefaultMQPushConsumer633216551XXXstart0 -> DefaultMQPushConsumerImpl1317777407XXXstart0;
+DefaultMQPushConsumerImpl1317777407XXXstart0 -> DefaultMQPushConsumer633216551XXXgetMessageListener0;
+MonitorService2000019609XXXstart0 -> DefaultMQPushConsumer633216551XXXstart0;
+PushConsumer1191250838XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+PushConsumer255454115XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+PushConsumerImpl725268464XXXstartup0 -> DefaultMQPushConsumer633216551XXXstart0;
+PushConsumerWithNamespace1679326985XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+ResponseConsumer196752767XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+SqlFilterConsumer819045724XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+TagFilterConsumer819045724XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+TracePushConsumer244193786XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+    
+}
+@enduml

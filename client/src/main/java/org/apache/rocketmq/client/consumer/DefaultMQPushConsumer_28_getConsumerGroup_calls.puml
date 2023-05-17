@@ -1,0 +1,979 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer#getConsumerGroup()",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1411517106 { 
+   	label=apache
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1714486248 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1115057354 { 
+   	label=SqlFilterConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   SqlFilterConsumer819045724XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="SqlFilterConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1195812458 { 
+   	label=TagFilterConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TagFilterConsumer819045724XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="TagFilterConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1585535943 { 
+   	label=ClientRemotingProcessor
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ClientRemotingProcessor1527982467XXXresetOffset377663380[
+	label="+ resetOffset()"
+	style=filled
+	fillcolor=white
+	tooltip="ClientRemotingProcessor
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1590985330 { 
+   	label=PushConsumerWithNamespace
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PushConsumerWithNamespace1679326985XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerWithNamespace
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1817307469 { 
+   	label=MQClientInstance
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQClientInstance700434529XXXconsumerRunningInfo1808118735[
+	label="+ consumerRunningInfo()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientInstance
+
+null"
+	fontcolor=darkgreen
+];
+
+MQClientInstance700434529XXXresetOffset29498362[
+	label="+ resetOffset()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientInstance
+
+null"
+	fontcolor=darkgreen
+];
+
+MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0[
+	label="+ sendHeartbeatToAllBrokerWithLock()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientInstance
+
+null"
+	fontcolor=darkgreen
+];
+
+MQClientInstance700434529XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientInstance
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1877788505 { 
+   	label=ConsumeMessageConcurrentlyService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsumeMessageConcurrentlyService1317777407XXXprocessConsumeResult1899794788[
+	label="+ processConsumeResult()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageConcurrentlyService
+
+null"
+	fontcolor=darkgreen
+];
+
+ConsumeMessageConcurrentlyService1317777407XXXsendMessageBack1643873219[
+	label="+ sendMessageBack()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageConcurrentlyService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1884334830 { 
+   	label=ConsumeMessageOrderlyService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsumeMessageOrderlyService1317777407XXXprocessConsumeResult368459112[
+	label="+ processConsumeResult()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageOrderlyService
+
+null"
+	fontcolor=darkgreen
+];
+
+ConsumeMessageOrderlyService1317777407XXXsendMessageBack302718138[
+	label="+ sendMessageBack()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageOrderlyService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2004609280 { 
+   	label=DefaultMQPushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumer633216551XXXgetConsumerGroup0[
+	label="+ getConsumerGroup()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXresume0[
+	label="+ resume()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Resume pulling.&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXsendMessageBack1842630438[
+	label="+ sendMessageBack()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Send message back to the broker whose name is \<code\>brokerName\</code\> and the message will be re-delivered in&#10;  future.&#10; &#10;  This method will be removed or it's visibility will be changed in a certain version after April 5, 2020, so&#10;  please do not use this method.&#10; &#10;  @param msg Message to send back.&#10;  @param delayLevel delay level.&#10;  @param brokerName broker name.&#10;  @throws RemotingException if there is any network-tier error.&#10;  @throws MQBrokerException if there is any broker error.&#10;  @throws InterruptedException if the thread is interrupted.&#10;  @throws MQClientException if there is any client error.&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXsendMessageBack2073561727[
+	label="+ sendMessageBack()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Send message back to broker which will be re-delivered in future.&#10; &#10;  This method will be removed or it's visibility will be changed in a certain version after April 5, 2020, so&#10;  please do not use this method.&#10; &#10;  @param msg Message to send back.&#10;  @param delayLevel delay level.&#10;  @throws RemotingException if there is any network-tier error.&#10;  @throws MQBrokerException if there is any broker error.&#10;  @throws InterruptedException if the thread is interrupted.&#10;  @throws MQClientException if there is any client error.&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Shut down this client and releasing underlying resources.&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  This method gets internal infrastructure readily to serve. Instances must call this method after configuration.&#10; &#10;  @throws MQClientException if there is any client error.&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXsubscribe1623095521[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Subscribe a topic by message selector.&#10; &#10;  @param topic topic to consume.&#10;  @param messageSelector {@link org.apache.rocketmq.client.consumer.MessageSelector}&#10;  @see org.apache.rocketmq.client.consumer.MessageSelector#bySql&#10;  @see org.apache.rocketmq.client.consumer.MessageSelector#byTag&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXsubscribe2013066710[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Subscribe a topic to consuming subscription.&#10; &#10;  @param topic topic to subscribe.&#10;  @param subExpression subscription expression.it only support or operation such as \"tag1 || tag2 || tag3\" \<br\>&#10;  if null or  expression,meaning subscribe all&#10;  @throws MQClientException if there is any client error.&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXsubscribe924985979[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Subscribe a topic to consuming subscription.&#10; &#10;  @param topic topic to consume.&#10;  @param fullClassName full class name,must extend org.apache.rocketmq.common.filter. MessageFilter&#10;  @param filterClassSource class source code,used UTF-8 file encoding,must be responsible for your code safety&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXsuspend0[
+	label="+ suspend()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Suspend pulling new messages.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_205326720 { 
+   	label=PullMessageService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PullMessageService1317777407XXXrun0[
+	label="+ run()"
+	style=filled
+	fillcolor=white
+	tooltip="PullMessageService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_274343363 { 
+   	label=DefaultLitePullConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultLitePullConsumerImpl1317777407XXXsubscribe1623095521[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultLitePullConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultLitePullConsumerImpl1317777407XXXsubscribe2013066710[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultLitePullConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_290650472 { 
+   	label=DefaultMQPushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumerImpl1317777407XXXconsumerRunningInfo0[
+	label="+ consumerRunningInfo()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXgroupName0[
+	label="+ groupName()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0[
+	label="+ persistConsumerOffset()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXpullMessage829283434[
+	label="+ pullMessage()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXqueryConsumeTimeSpan1808118735[
+	label="+ queryConsumeTimeSpan()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXresetOffsetByTimeStamp3327612[
+	label="+ resetOffsetByTimeStamp()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXresume0[
+	label="+ resume()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438[
+	label="+ sendMessageBack()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXsubscribe924985979[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXsuspend0[
+	label="+ suspend()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_325102424 { 
+   	label=PushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PushConsumer1191250838XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_330370686 { 
+   	label=MonitorService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MonitorService2000019609XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="MonitorService
+
+null"
+	fontcolor=darkgreen
+];
+
+MonitorService2000019609XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="MonitorService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_425376580 { 
+   	label=ResponseConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ResponseConsumer196752767XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="ResponseConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_682774321 { 
+   	label=ProcessQueue
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ProcessQueue1317777407XXXcleanExpiredMsg1656847019[
+	label="+ cleanExpiredMsg()"
+	style=filled
+	fillcolor=white
+	tooltip="ProcessQueue
+
+&#10;  @param pushConsumer&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_705757163 { 
+   	label=Consumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Consumer1014534777XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Consumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_741238794 { 
+   	label=RebalancePushImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   RebalancePushImpl1317777407XXXmessageQueueChanged1980240305[
+	label="+ messageQueueChanged()"
+	style=filled
+	fillcolor=white
+	tooltip="RebalancePushImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_859184273 { 
+   	label=ConsumeRequest
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsumeRequest1884334830XXXrun0[
+	label="+ run()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeRequest
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_877673347 { 
+   	label=AclClient
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   AclClient1191250838XXXpushConsumer0[
+	label="+ pushConsumer()"
+	style=filled
+	fillcolor=white
+	tooltip="AclClient
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_950274803 { 
+   	label=TracePushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TracePushConsumer244193786XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="TracePushConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_998304410 { 
+   	label=DefaultMQProducerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQProducerImpl1753769059XXXrequest1190969259[
+	label="+ request()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQProducerImpl1753769059XXXrequest1547336039[
+	label="+ request()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQProducerImpl1753769059XXXrequest1763693237[
+	label="+ request()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQProducerImpl1753769059XXXrequest194843145[
+	label="+ request()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQProducerImpl1753769059XXXrequest1952399209[
+	label="+ request()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQProducerImpl1753769059XXXrequest391141895[
+	label="+ request()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQProducerImpl1753769059XXXstart64711720[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+subgraph cluster_679248890 { 
+   	label=openmessaging
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1292383980 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1112861134 { 
+   	label=PushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PushConsumerImpl725268464XXXattachQueue1777682870[
+	label="+ attachQueue()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+PushConsumerImpl725268464XXXresume0[
+	label="+ resume()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+PushConsumerImpl725268464XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+PushConsumerImpl725268464XXXstartup0[
+	label="+ startup()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+PushConsumerImpl725268464XXXsuspend0[
+	label="+ suspend()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+AclClient1191250838XXXpushConsumer0 -> DefaultMQPushConsumer633216551XXXstart0;
+AclClient1191250838XXXpushConsumer0 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+ClientRemotingProcessor1527982467XXXresetOffset377663380 -> MQClientInstance700434529XXXresetOffset29498362;
+ConsumeMessageConcurrentlyService1317777407XXXprocessConsumeResult1899794788 -> ConsumeMessageConcurrentlyService1317777407XXXsendMessageBack1643873219;
+ConsumeMessageConcurrentlyService1317777407XXXsendMessageBack1643873219 -> DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438;
+ConsumeMessageOrderlyService1317777407XXXprocessConsumeResult368459112 -> ConsumeMessageOrderlyService1317777407XXXsendMessageBack302718138;
+ConsumeMessageOrderlyService1317777407XXXsendMessageBack302718138 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+ConsumeRequest1877788505XXXrun0 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+ConsumeRequest1884334830XXXrun0 -> ConsumeMessageOrderlyService1317777407XXXprocessConsumeResult368459112;
+ConsumeRequest1884334830XXXrun0 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+Consumer1014534777XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXshutdown0;
+Consumer1014534777XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+Consumer1014534777XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+Consumer1268842237XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+Consumer1268842237XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+Consumer2031561881XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+Consumer2031561881XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+Consumer382608349XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+Consumer382608349XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+DefaultLitePullConsumerImpl1317777407XXXsubscribe1623095521 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultLitePullConsumerImpl1317777407XXXsubscribe2013066710 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQProducerImpl1753769059XXXrequest1190969259 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQProducerImpl1753769059XXXrequest1547336039 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQProducerImpl1753769059XXXrequest1763693237 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQProducerImpl1753769059XXXrequest194843145 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQProducerImpl1753769059XXXrequest1952399209 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQProducerImpl1753769059XXXrequest391141895 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQProducerImpl1753769059XXXstart64711720 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQPushConsumer633216551XXXresume0 -> DefaultMQPushConsumerImpl1317777407XXXresume0;
+DefaultMQPushConsumer633216551XXXsendMessageBack1842630438 -> DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438;
+DefaultMQPushConsumer633216551XXXsendMessageBack2073561727 -> DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438;
+DefaultMQPushConsumer633216551XXXshutdown0 -> DefaultMQPushConsumerImpl1317777407XXXshutdown3327612;
+DefaultMQPushConsumer633216551XXXstart0 -> DefaultMQPushConsumerImpl1317777407XXXstart0;
+DefaultMQPushConsumer633216551XXXsubscribe1623095521 -> DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521;
+DefaultMQPushConsumer633216551XXXsubscribe2013066710 -> DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710;
+DefaultMQPushConsumer633216551XXXsubscribe924985979 -> DefaultMQPushConsumerImpl1317777407XXXsubscribe924985979;
+DefaultMQPushConsumer633216551XXXsuspend0 -> DefaultMQPushConsumerImpl1317777407XXXsuspend0;
+DefaultMQPushConsumerImpl1317777407XXXconsumerRunningInfo0 -> DefaultMQPushConsumerImpl1317777407XXXgroupName0;
+DefaultMQPushConsumerImpl1317777407XXXgroupName0 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXpullMessage829283434 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXqueryConsumeTimeSpan1808118735 -> DefaultMQPushConsumerImpl1317777407XXXgroupName0;
+DefaultMQPushConsumerImpl1317777407XXXresetOffsetByTimeStamp3327612 -> DefaultMQPushConsumerImpl1317777407XXXgroupName0;
+DefaultMQPushConsumerImpl1317777407XXXresetOffsetByTimeStamp3327612 -> MQClientInstance700434529XXXresetOffset29498362;
+DefaultMQPushConsumerImpl1317777407XXXresume0 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXshutdown0 -> DefaultMQPushConsumerImpl1317777407XXXshutdown3327612;
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612 -> DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0;
+DefaultMQPushConsumerImpl1317777407XXXstart0 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXstart0 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521 -> DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe924985979 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe924985979 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQPushConsumerImpl1317777407XXXsuspend0 -> DefaultMQPushConsumer633216551XXXgetConsumerGroup0;
+MQClientInstance700434529XXXconsumerRunningInfo1808118735 -> DefaultMQPushConsumerImpl1317777407XXXconsumerRunningInfo0;
+MQClientInstance700434529XXXresetOffset29498362 -> DefaultMQPushConsumerImpl1317777407XXXresume0;
+MQClientInstance700434529XXXresetOffset29498362 -> DefaultMQPushConsumerImpl1317777407XXXsuspend0;
+MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0 -> DefaultMQPushConsumerImpl1317777407XXXgroupName0;
+MQClientInstance700434529XXXstart0 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+MonitorService2000019609XXXshutdown0 -> DefaultMQPushConsumer633216551XXXshutdown0;
+MonitorService2000019609XXXstart0 -> DefaultMQPushConsumer633216551XXXstart0;
+ProcessQueue1317777407XXXcleanExpiredMsg1656847019 -> DefaultMQPushConsumer633216551XXXsendMessageBack2073561727;
+PullMessageService1317777407XXXrun0 -> DefaultMQPushConsumerImpl1317777407XXXpullMessage829283434;
+PushConsumer1191250838XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+PushConsumer1191250838XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+PushConsumer255454115XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+PushConsumer255454115XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+PushConsumerImpl725268464XXXattachQueue1777682870 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+PushConsumerImpl725268464XXXresume0 -> DefaultMQPushConsumer633216551XXXresume0;
+PushConsumerImpl725268464XXXshutdown0 -> DefaultMQPushConsumer633216551XXXshutdown0;
+PushConsumerImpl725268464XXXstartup0 -> DefaultMQPushConsumer633216551XXXstart0;
+PushConsumerImpl725268464XXXsuspend0 -> DefaultMQPushConsumer633216551XXXsuspend0;
+PushConsumerWithNamespace1679326985XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+PushConsumerWithNamespace1679326985XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+RebalancePushImpl1317777407XXXmessageQueueChanged1980240305 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+ResponseConsumer196752767XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+ResponseConsumer196752767XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+SqlFilterConsumer819045724XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+TagFilterConsumer819045724XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+TagFilterConsumer819045724XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+TracePushConsumer244193786XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXstart0;
+TracePushConsumer244193786XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe2013066710;
+    
+}
+@enduml

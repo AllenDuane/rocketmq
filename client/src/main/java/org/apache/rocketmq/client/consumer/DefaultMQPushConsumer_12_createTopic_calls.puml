@@ -1,0 +1,227 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer#createTopic(String,String,int,int)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1411517106 { 
+   	label=apache
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1714486248 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1314323680 { 
+   	label=MQAdminImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQAdminImpl1527982467XXXcreateTopic1491032266[
+	label="+ createTopic()"
+	style=filled
+	fillcolor=white
+	tooltip="MQAdminImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2004609280 { 
+   	label=DefaultMQPushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumer633216551XXXcreateTopic1468174875[
+	label="+ createTopic()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  This method will be removed in a certain version after April 5, 2020, so please do not use this method.&#10; "
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumer633216551XXXcreateTopic1491032266[
+	label="+ createTopic()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  This method will be removed in a certain version after April 5, 2020, so please do not use this method.&#10; "
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_290650472 { 
+   	label=DefaultMQPushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumerImpl1317777407XXXcreateTopic1491032266[
+	label="+ createTopic()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_814568284 { 
+   	label=Validators
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Validators1708762283XXXcheckTopic1808118735[
+	label="+ checkTopic()"
+	style=filled
+	fillcolor=white
+	tooltip="Validators
+
+null"
+	fontcolor=darkgreen
+];
+
+Validators1708762283XXXisSystemTopic1808118735[
+	label="+ isSystemTopic()"
+	style=filled
+	fillcolor=white
+	tooltip="Validators
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_931339104 { 
+   	label=MQClientAPIImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQClientAPIImpl1527982467XXXcreateTopic493109801[
+	label="+ createTopic()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientAPIImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+MQClientAPIImpl1527982467XXXgetTopicRouteInfoFromNameServer949119647[
+	label="+ getTopicRouteInfoFromNameServer()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientAPIImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+DefaultMQPushConsumer633216551XXXcreateTopic1468174875 -> DefaultMQPushConsumer633216551XXXcreateTopic1491032266;
+DefaultMQPushConsumer633216551XXXcreateTopic1491032266 -> DefaultMQPushConsumerImpl1317777407XXXcreateTopic1491032266;
+DefaultMQPushConsumerImpl1317777407XXXcreateTopic1491032266 -> MQAdminImpl1527982467XXXcreateTopic1491032266;
+MQAdminImpl1527982467XXXcreateTopic1491032266 -> MQClientAPIImpl1527982467XXXcreateTopic493109801;
+MQAdminImpl1527982467XXXcreateTopic1491032266 -> MQClientAPIImpl1527982467XXXgetTopicRouteInfoFromNameServer949119647;
+MQAdminImpl1527982467XXXcreateTopic1491032266 -> Validators1708762283XXXcheckTopic1808118735;
+MQAdminImpl1527982467XXXcreateTopic1491032266 -> Validators1708762283XXXisSystemTopic1808118735;
+    
+}
+@enduml

@@ -1,0 +1,490 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer#sendMessageBack(MessageExt,int)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1411517106 { 
+   	label=apache
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1714486248 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1350583147 { 
+   	label=Slf4jLogger
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Slf4jLogger2118845798XXXerror424332965[
+	label="+ error()"
+	style=filled
+	fillcolor=white
+	tooltip="Slf4jLogger
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1360810057 { 
+   	label=RemotingHelper
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   RemotingHelper627545558XXXparseSocketAddressAddr159223009[
+	label="+ parseSocketAddressAddr()"
+	style=filled
+	fillcolor=white
+	tooltip="RemotingHelper
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1415476189 { 
+   	label=Message
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Message1295052772XXXgetProperty1808118735[
+	label="+ getProperty()"
+	style=filled
+	fillcolor=white
+	tooltip="Message
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1463395652 { 
+   	label=MessageAccessor
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MessageAccessor1295052772XXXclearProperty65918068[
+	label="+ clearProperty()"
+	style=filled
+	fillcolor=white
+	tooltip="MessageAccessor
+
+null"
+	fontcolor=darkgreen
+];
+
+MessageAccessor1295052772XXXgetOriginMessageId1675388953[
+	label="+ getOriginMessageId()"
+	style=filled
+	fillcolor=white
+	tooltip="MessageAccessor
+
+null"
+	fontcolor=darkgreen
+];
+
+MessageAccessor1295052772XXXputProperty1775847985[
+	label="+ putProperty()"
+	style=filled
+	fillcolor=white
+	tooltip="MessageAccessor
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1817307469 { 
+   	label=MQClientInstance
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQClientInstance700434529XXXfindBrokerAddressInPublish1808118735[
+	label="+ findBrokerAddressInPublish()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientInstance
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1833644171 { 
+   	label=InnerLogger
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   InnerLogger1066893677XXXerror424332965[
+	label="+ error()"
+	style=filled
+	fillcolor=white
+	tooltip="InnerLogger
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1877788505 { 
+   	label=ConsumeMessageConcurrentlyService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsumeMessageConcurrentlyService1317777407XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageConcurrentlyService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1882344007 { 
+   	label=NettyRemotingClient
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   NettyRemotingClient1632456809XXXinvokeSync1208980947[
+	label="+ invokeSync()"
+	style=filled
+	fillcolor=white
+	tooltip="NettyRemotingClient
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1889763836 { 
+   	label=UtilAll
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   UtilAll1711659723XXXisBlank1808118735[
+	label="+ isBlank()"
+	style=filled
+	fillcolor=white
+	tooltip="UtilAll
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2004609280 { 
+   	label=DefaultMQPushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumer633216551XXXsendMessageBack2073561727[
+	label="+ sendMessageBack()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Send message back to broker which will be re-delivered in future.&#10; &#10;  This method will be removed or it's visibility will be changed in a certain version after April 5, 2020, so&#10;  please do not use this method.&#10; &#10;  @param msg Message to send back.&#10;  @param delayLevel delay level.&#10;  @throws RemotingException if there is any network-tier error.&#10;  @throws MQBrokerException if there is any broker error.&#10;  @throws InterruptedException if the thread is interrupted.&#10;  @throws MQClientException if there is any client error.&#10; "
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_246761303 { 
+   	label=Logger
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Logger690443815XXXerror1780628115[
+	label="+ error()"
+	style=filled
+	fillcolor=white
+	tooltip="Logger
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_262376958 { 
+   	label=DefaultMQProducer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQProducer1069208203XXXsend1675388953[
+	label="+ send()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducer
+
+&#10;  Send message in synchronous mode. This method returns only when the sending procedure totally completes. \</p\>&#10; &#10;  \<strong\>Warn:\</strong\> this method has internal retry-mechanism, that is, internal implementation will retry&#10;  {@link #retryTimesWhenSendFailed} times before claiming failure. As a result, multiple messages may potentially&#10;  delivered to broker(s). It's up to the application developers to resolve potential duplication issue.&#10; &#10;  @param msg Message to send.&#10;  @return {@link SendResult} instance to inform senders details of the deliverable, say Message ID of the message,&#10;  {@link SendStatus} indicating broker storage/replication status, message queue sent to, etc.&#10;  @throws MQClientException if there is any client error.&#10;  @throws RemotingException if there is any network-tier error.&#10;  @throws MQBrokerException if there is any error with broker.&#10;  @throws InterruptedException if the sending thread is interrupted.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_290650472 { 
+   	label=DefaultMQPushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438[
+	label="+ sendMessageBack()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXstart0[
+	label="+ start()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_454799875 { 
+   	label=RemotingCommand
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   RemotingCommand1388817347XXXcreateRequestCommand356427174[
+	label="+ createRequestCommand()"
+	style=filled
+	fillcolor=white
+	tooltip="RemotingCommand
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_454919608 { 
+   	label=MixAll
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MixAll1711659723XXXbrokerVIPChannel236334797[
+	label="+ brokerVIPChannel()"
+	style=filled
+	fillcolor=white
+	tooltip="MixAll
+
+null"
+	fontcolor=darkgreen
+];
+
+MixAll1711659723XXXgetRetryTopic1808118735[
+	label="+ getRetryTopic()"
+	style=filled
+	fillcolor=white
+	tooltip="MixAll
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_682774321 { 
+   	label=ProcessQueue
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ProcessQueue1317777407XXXcleanExpiredMsg1656847019[
+	label="+ cleanExpiredMsg()"
+	style=filled
+	fillcolor=white
+	tooltip="ProcessQueue
+
+&#10;  @param pushConsumer&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_814568284 { 
+   	label=Validators
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Validators1708762283XXXcheckMessage1230429180[
+	label="+ checkMessage()"
+	style=filled
+	fillcolor=white
+	tooltip="Validators
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_931339104 { 
+   	label=MQClientAPIImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQClientAPIImpl1527982467XXXconsumerSendMessageBack1221343052[
+	label="+ consumerSendMessageBack()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientAPIImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_998304410 { 
+   	label=DefaultMQProducerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQProducerImpl1753769059XXXsend1675388953[
+	label="+ send()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+&#10;  DEFAULT SYNC -------------------------------------------------------&#10; "
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+ConsumeMessageConcurrentlyService1317777407XXXstart0 -> ProcessQueue1317777407XXXcleanExpiredMsg1656847019;
+DefaultMQProducer1069208203XXXsend1675388953 -> DefaultMQProducerImpl1753769059XXXsend1675388953;
+DefaultMQProducer1069208203XXXsend1675388953 -> Validators1708762283XXXcheckMessage1230429180;
+DefaultMQPushConsumer633216551XXXsendMessageBack2073561727 -> DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> DefaultMQProducer1069208203XXXsend1675388953;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> InnerLogger1066893677XXXerror424332965;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> MQClientAPIImpl1527982467XXXconsumerSendMessageBack1221343052;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> MQClientInstance700434529XXXfindBrokerAddressInPublish1808118735;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> MessageAccessor1295052772XXXclearProperty65918068;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> MessageAccessor1295052772XXXgetOriginMessageId1675388953;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> MessageAccessor1295052772XXXputProperty1775847985;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> MixAll1711659723XXXgetRetryTopic1808118735;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> RemotingHelper627545558XXXparseSocketAddressAddr159223009;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> Slf4jLogger2118845798XXXerror424332965;
+DefaultMQPushConsumerImpl1317777407XXXsendMessageBack1842630438 -> UtilAll1711659723XXXisBlank1808118735;
+DefaultMQPushConsumerImpl1317777407XXXstart0 -> ConsumeMessageConcurrentlyService1317777407XXXstart0;
+InnerLogger1066893677XXXerror424332965 -> Logger690443815XXXerror1780628115;
+MQClientAPIImpl1527982467XXXconsumerSendMessageBack1221343052 -> MixAll1711659723XXXbrokerVIPChannel236334797;
+MQClientAPIImpl1527982467XXXconsumerSendMessageBack1221343052 -> NettyRemotingClient1632456809XXXinvokeSync1208980947;
+MQClientAPIImpl1527982467XXXconsumerSendMessageBack1221343052 -> RemotingCommand1388817347XXXcreateRequestCommand356427174;
+MessageAccessor1295052772XXXgetOriginMessageId1675388953 -> Message1295052772XXXgetProperty1808118735;
+ProcessQueue1317777407XXXcleanExpiredMsg1656847019 -> DefaultMQPushConsumer633216551XXXsendMessageBack2073561727;
+    
+}
+@enduml

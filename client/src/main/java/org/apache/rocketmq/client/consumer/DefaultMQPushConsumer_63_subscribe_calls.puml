@@ -1,0 +1,236 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer#subscribe(String,MessageSelector)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1411517106 { 
+   	label=apache
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1714486248 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1115057354 { 
+   	label=SqlFilterConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   SqlFilterConsumer819045724XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="SqlFilterConsumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_160577077 { 
+   	label=Consumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Consumer2031561881XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Consumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1817307469 { 
+   	label=MQClientInstance
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0[
+	label="+ sendHeartbeatToAllBrokerWithLock()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientInstance
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_193740497 { 
+   	label=FilterAPI
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FilterAPI260500475XXXbuild924985979[
+	label="+ build()"
+	style=filled
+	fillcolor=white
+	tooltip="FilterAPI
+
+null"
+	fontcolor=darkgreen
+];
+
+FilterAPI260500475XXXbuildSubscriptionData924985979[
+	label="+ buildSubscriptionData()"
+	style=filled
+	fillcolor=white
+	tooltip="FilterAPI
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2004609280 { 
+   	label=DefaultMQPushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumer633216551XXXsubscribe1623095521[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Subscribe a topic by message selector.&#10; &#10;  @param topic topic to consume.&#10;  @param messageSelector {@link org.apache.rocketmq.client.consumer.MessageSelector}&#10;  @see org.apache.rocketmq.client.consumer.MessageSelector#bySql&#10;  @see org.apache.rocketmq.client.consumer.MessageSelector#byTag&#10; "
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_290650472 { 
+   	label=DefaultMQPushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710[
+	label="+ subscribe()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+Consumer2031561881XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe1623095521;
+DefaultMQPushConsumer633216551XXXsubscribe1623095521 -> DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521 -> DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521 -> FilterAPI260500475XXXbuild924985979;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe1623095521 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710 -> FilterAPI260500475XXXbuildSubscriptionData924985979;
+DefaultMQPushConsumerImpl1317777407XXXsubscribe2013066710 -> MQClientInstance700434529XXXsendHeartbeatToAllBrokerWithLock0;
+FilterAPI260500475XXXbuild924985979 -> FilterAPI260500475XXXbuildSubscriptionData924985979;
+SqlFilterConsumer819045724XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXsubscribe1623095521;
+    
+}
+@enduml

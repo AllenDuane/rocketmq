@@ -1,0 +1,310 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer#DefaultMQPushConsumer(String,String,RPCHook,AllocateMessageQueueStrategy,boolean,String)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1411517106 { 
+   	label=apache
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1714486248 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1188440734 { 
+   	label=MessageFormatter
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MessageFormatter1066893677XXXformat1881684228[
+	label="+ format()"
+	style=filled
+	fillcolor=white
+	tooltip="MessageFormatter
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1317125982 { 
+   	label=ConsumeMessageTraceHookImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsumeMessageTraceHookImpl1821920945XXXhookName0[
+	label="+ hookName()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageTraceHookImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1350583147 { 
+   	label=Slf4jLogger
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Slf4jLogger2118845798XXXerror1808118735[
+	label="+ error()"
+	style=filled
+	fillcolor=white
+	tooltip="Slf4jLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+Slf4jLogger2118845798XXXinfo1881684228[
+	label="+ info()"
+	style=filled
+	fillcolor=white
+	tooltip="Slf4jLogger
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1833644171 { 
+   	label=InnerLogger
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   InnerLogger1066893677XXXerror1808118735[
+	label="+ error()"
+	style=filled
+	fillcolor=white
+	tooltip="InnerLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+InnerLogger1066893677XXXinfo1881684228[
+	label="+ info()"
+	style=filled
+	fillcolor=white
+	tooltip="InnerLogger
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2004609280 { 
+   	label=DefaultMQPushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumer633216551XXXDefaultMQPushConsumer869587955[
+	label="+ DefaultMQPushConsumer()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Constructor specifying namespace, consumer group, RPC hook, message queue allocating algorithm, enabled msg trace flag and customized trace topic name.&#10; &#10;  @param namespace Namespace for this MQ Producer instance.&#10;  @param consumerGroup Consume queue.&#10;  @param rpcHook RPC hook to execute before each remoting command.&#10;  @param allocateMessageQueueStrategy message queue allocating algorithm.&#10;  @param enableMsgTrace Switch flag instance for message trace.&#10;  @param customizedTraceTopic The name value of message trace topic.If you don't config,you can use the default trace topic name.&#10; "
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_246761303 { 
+   	label=Logger
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Logger690443815XXXcallAppenders754233701[
+	label="+ callAppenders()"
+	style=filled
+	fillcolor=white
+	tooltip="Logger
+
+null"
+	fontcolor=darkgreen
+];
+
+Logger690443815XXXerror1939501217[
+	label="+ error()"
+	style=filled
+	fillcolor=white
+	tooltip="Logger
+
+null"
+	fontcolor=darkgreen
+];
+
+Logger690443815XXXinfo1780628115[
+	label="+ info()"
+	style=filled
+	fillcolor=white
+	tooltip="Logger
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_290650472 { 
+   	label=DefaultMQPushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumerImpl1317777407XXXregisterConsumeMessageHook1230348210[
+	label="+ registerConsumeMessageHook()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_700413149 { 
+   	label=Level
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Level690443815XXXisGreaterOrEqual73313124[
+	label="+ isGreaterOrEqual()"
+	style=filled
+	fillcolor=white
+	tooltip="Level
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_717449124 { 
+   	label=DefaultLoggerRepository
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultLoggerRepository246761303XXXisDisabled104431[
+	label="+ isDisabled()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultLoggerRepository
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+DefaultMQPushConsumer633216551XXXDefaultMQPushConsumer869587955 -> DefaultMQPushConsumerImpl1317777407XXXregisterConsumeMessageHook1230348210;
+DefaultMQPushConsumer633216551XXXDefaultMQPushConsumer869587955 -> InnerLogger1066893677XXXerror1808118735;
+DefaultMQPushConsumer633216551XXXDefaultMQPushConsumer869587955 -> Slf4jLogger2118845798XXXerror1808118735;
+DefaultMQPushConsumerImpl1317777407XXXregisterConsumeMessageHook1230348210 -> ConsumeMessageTraceHookImpl1821920945XXXhookName0;
+DefaultMQPushConsumerImpl1317777407XXXregisterConsumeMessageHook1230348210 -> InnerLogger1066893677XXXinfo1881684228;
+DefaultMQPushConsumerImpl1317777407XXXregisterConsumeMessageHook1230348210 -> Slf4jLogger2118845798XXXinfo1881684228;
+InnerLogger1066893677XXXerror1808118735 -> Logger690443815XXXerror1939501217;
+InnerLogger1066893677XXXinfo1881684228 -> Logger690443815XXXinfo1780628115;
+InnerLogger1066893677XXXinfo1881684228 -> MessageFormatter1066893677XXXformat1881684228;
+Logger690443815XXXerror1939501217 -> DefaultLoggerRepository246761303XXXisDisabled104431;
+Logger690443815XXXerror1939501217 -> Level690443815XXXisGreaterOrEqual73313124;
+Logger690443815XXXerror1939501217 -> Logger690443815XXXcallAppenders754233701;
+    
+}
+@enduml

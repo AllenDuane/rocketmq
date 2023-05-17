@@ -1,0 +1,720 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer#shutdown()",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "org.apache.rocketmq.client.consumer.DefaultMQPushConsumer",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1411517106 { 
+   	label=apache
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1714486248 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1350583147 { 
+   	label=Slf4jLogger
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Slf4jLogger2118845798XXXerror424332965[
+	label="+ error()"
+	style=filled
+	fillcolor=white
+	tooltip="Slf4jLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+Slf4jLogger2118845798XXXinfo1881684228[
+	label="+ info()"
+	style=filled
+	fillcolor=white
+	tooltip="Slf4jLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+Slf4jLogger2118845798XXXinfo658265366[
+	label="+ info()"
+	style=filled
+	fillcolor=white
+	tooltip="Slf4jLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+Slf4jLogger2118845798XXXwarn1808118735[
+	label="+ warn()"
+	style=filled
+	fillcolor=white
+	tooltip="Slf4jLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+Slf4jLogger2118845798XXXwarn424332965[
+	label="+ warn()"
+	style=filled
+	fillcolor=white
+	tooltip="Slf4jLogger
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1531829244 { 
+   	label=AsyncTraceDispatcher
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   AsyncTraceDispatcher133109314XXXremoveShutdownHook0[
+	label="+ removeShutdownHook()"
+	style=filled
+	fillcolor=white
+	tooltip="AsyncTraceDispatcher
+
+null"
+	fontcolor=darkgreen
+];
+
+AsyncTraceDispatcher133109314XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="AsyncTraceDispatcher
+
+&#10;  Close the trace Hook&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1537016101 { 
+   	label=TransactionMQProducer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   TransactionMQProducer1069208203XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="TransactionMQProducer
+
+&#10;  This method shuts down this producer instance and releases related resources.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1578904348 { 
+   	label=ServiceThread
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ServiceThread1711659723XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="ServiceThread
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1599962291 { 
+   	label=RemoteBrokerOffsetStore
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   RemoteBrokerOffsetStore339263348XXXpersistAll1670009318[
+	label="+ persistAll()"
+	style=filled
+	fillcolor=white
+	tooltip="RemoteBrokerOffsetStore
+
+&#10;  Persist all offsets,may be in local storage or remote name server&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1817307469 { 
+   	label=MQClientInstance
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQClientInstance700434529XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientInstance
+
+null"
+	fontcolor=darkgreen
+];
+
+MQClientInstance700434529XXXunregisterConsumer1808118735[
+	label="+ unregisterConsumer()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientInstance
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1833644171 { 
+   	label=InnerLogger
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   InnerLogger1066893677XXXerror424332965[
+	label="+ error()"
+	style=filled
+	fillcolor=white
+	tooltip="InnerLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+InnerLogger1066893677XXXinfo1881684228[
+	label="+ info()"
+	style=filled
+	fillcolor=white
+	tooltip="InnerLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+InnerLogger1066893677XXXinfo658265366[
+	label="+ info()"
+	style=filled
+	fillcolor=white
+	tooltip="InnerLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+InnerLogger1066893677XXXwarn1808118735[
+	label="+ warn()"
+	style=filled
+	fillcolor=white
+	tooltip="InnerLogger
+
+null"
+	fontcolor=darkgreen
+];
+
+InnerLogger1066893677XXXwarn424332965[
+	label="+ warn()"
+	style=filled
+	fillcolor=white
+	tooltip="InnerLogger
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1877788505 { 
+   	label=ConsumeMessageConcurrentlyService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsumeMessageConcurrentlyService1317777407XXXshutdown3327612[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageConcurrentlyService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_1884334830 { 
+   	label=ConsumeMessageOrderlyService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ConsumeMessageOrderlyService1317777407XXXshutdown3327612[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageOrderlyService
+
+null"
+	fontcolor=darkgreen
+];
+
+ConsumeMessageOrderlyService1317777407XXXunlockAllMQ0[
+	label="+ unlockAllMQ()"
+	style=filled
+	fillcolor=white
+	tooltip="ConsumeMessageOrderlyService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2004609280 { 
+   	label=DefaultMQPushConsumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumer633216551XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumer
+
+&#10;  Shut down this client and releasing underlying resources.&#10; "
+	penwidth=4
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2008115011 { 
+   	label=FAQUrl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   FAQUrl223136636XXXsuggestTodo1808118735[
+	label="+ suggestTodo()"
+	style=filled
+	fillcolor=white
+	tooltip="FAQUrl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_2042557879 { 
+   	label=LocalFileOffsetStore
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   LocalFileOffsetStore339263348XXXpersistAll1670009318[
+	label="+ persistAll()"
+	style=filled
+	fillcolor=white
+	tooltip="LocalFileOffsetStore
+
+&#10;  Persist all offsets,may be in local storage or remote name server&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_205326720 { 
+   	label=PullMessageService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PullMessageService1317777407XXXshutdown64711720[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="PullMessageService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_262376958 { 
+   	label=DefaultMQProducer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQProducer1069208203XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducer
+
+&#10;  This method shuts down this producer instance and releases related resources.&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_290650472 { 
+   	label=DefaultMQPushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQPushConsumerImpl1317777407XXXmessageModel0[
+	label="+ messageModel()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0[
+	label="+ persistConsumerOffset()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQPushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_330370686 { 
+   	label=MonitorService
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MonitorService2000019609XXXmain0999713441[
+	label="+ main0()"
+	style=filled
+	fillcolor=white
+	tooltip="MonitorService
+
+null"
+	fontcolor=darkgreen
+];
+
+MonitorService2000019609XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="MonitorService
+
+null"
+	fontcolor=darkgreen
+];
+
+MonitorService2000019609XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="MonitorService
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_393429060 { 
+   	label=RebalanceImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   RebalanceImpl1317777407XXXdestroy0[
+	label="+ destroy()"
+	style=filled
+	fillcolor=white
+	tooltip="RebalanceImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_480397689 { 
+   	label=ThreadUtils
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   ThreadUtils1685148622XXXshutdownGracefully1618951241[
+	label="+ shutdownGracefully()"
+	style=filled
+	fillcolor=white
+	tooltip="ThreadUtils
+
+&#10;  An implementation of the graceful stop sequence recommended by&#10;  {@link ExecutorService}.&#10; &#10;  @param executor executor&#10;  @param timeout timeout&#10;  @param timeUnit timeUnit&#10; "
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_705757163 { 
+   	label=Consumer
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Consumer1014534777XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Consumer
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_781943885 { 
+   	label=MQClientManager
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQClientManager1527982467XXXremoveClientFactory1808118735[
+	label="+ removeClientFactory()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientManager
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_931339104 { 
+   	label=MQClientAPIImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   MQClientAPIImpl1527982467XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientAPIImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+MQClientAPIImpl1527982467XXXunregisterClient1452686320[
+	label="+ unregisterClient()"
+	style=filled
+	fillcolor=white
+	tooltip="MQClientAPIImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_998304410 { 
+   	label=DefaultMQProducerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   DefaultMQProducerImpl1753769059XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+
+DefaultMQProducerImpl1753769059XXXshutdown64711720[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="DefaultMQProducerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+subgraph cluster_679248890 { 
+   	label=openmessaging
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1292383980 { 
+   	label=rocketmq
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   subgraph cluster_1112861134 { 
+   	label=PushConsumerImpl
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   PushConsumerImpl725268464XXXshutdown0[
+	label="+ shutdown()"
+	style=filled
+	fillcolor=white
+	tooltip="PushConsumerImpl
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+} 
+
+'edges    
+AsyncTraceDispatcher133109314XXXshutdown0 -> AsyncTraceDispatcher133109314XXXremoveShutdownHook0;
+AsyncTraceDispatcher133109314XXXshutdown0 -> DefaultMQProducer1069208203XXXshutdown0;
+ConsumeMessageConcurrentlyService1317777407XXXshutdown3327612 -> ThreadUtils1685148622XXXshutdownGracefully1618951241;
+ConsumeMessageOrderlyService1317777407XXXshutdown3327612 -> ConsumeMessageOrderlyService1317777407XXXunlockAllMQ0;
+ConsumeMessageOrderlyService1317777407XXXshutdown3327612 -> DefaultMQPushConsumerImpl1317777407XXXmessageModel0;
+ConsumeMessageOrderlyService1317777407XXXshutdown3327612 -> ThreadUtils1685148622XXXshutdownGracefully1618951241;
+Consumer1014534777XXXmain1859653459 -> DefaultMQPushConsumer633216551XXXshutdown0;
+DefaultMQProducer1069208203XXXshutdown0 -> DefaultMQProducerImpl1753769059XXXshutdown0;
+DefaultMQProducer1069208203XXXshutdown0 -> TransactionMQProducer1069208203XXXshutdown0;
+DefaultMQPushConsumer633216551XXXshutdown0 -> AsyncTraceDispatcher133109314XXXshutdown0;
+DefaultMQPushConsumer633216551XXXshutdown0 -> DefaultMQPushConsumerImpl1317777407XXXshutdown3327612;
+DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0 -> FAQUrl223136636XXXsuggestTodo1808118735;
+DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0 -> InnerLogger1066893677XXXerror424332965;
+DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0 -> LocalFileOffsetStore339263348XXXpersistAll1670009318;
+DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0 -> RemoteBrokerOffsetStore339263348XXXpersistAll1670009318;
+DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0 -> Slf4jLogger2118845798XXXerror424332965;
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612 -> ConsumeMessageConcurrentlyService1317777407XXXshutdown3327612;
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612 -> ConsumeMessageOrderlyService1317777407XXXshutdown3327612;
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612 -> DefaultMQPushConsumerImpl1317777407XXXpersistConsumerOffset0;
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612 -> MQClientInstance700434529XXXshutdown0;
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612 -> MQClientInstance700434529XXXunregisterConsumer1808118735;
+DefaultMQPushConsumerImpl1317777407XXXshutdown3327612 -> RebalanceImpl1317777407XXXdestroy0;
+MQClientInstance700434529XXXshutdown0 -> DefaultMQProducerImpl1753769059XXXshutdown64711720;
+MQClientInstance700434529XXXshutdown0 -> InnerLogger1066893677XXXinfo1881684228;
+MQClientInstance700434529XXXshutdown0 -> MQClientAPIImpl1527982467XXXshutdown0;
+MQClientInstance700434529XXXshutdown0 -> MQClientManager1527982467XXXremoveClientFactory1808118735;
+MQClientInstance700434529XXXshutdown0 -> PullMessageService1317777407XXXshutdown64711720;
+MQClientInstance700434529XXXshutdown0 -> ServiceThread1711659723XXXshutdown0;
+MQClientInstance700434529XXXshutdown0 -> Slf4jLogger2118845798XXXinfo1881684228;
+MQClientInstance700434529XXXunregisterConsumer1808118735 -> InnerLogger1066893677XXXinfo658265366;
+MQClientInstance700434529XXXunregisterConsumer1808118735 -> InnerLogger1066893677XXXwarn1808118735;
+MQClientInstance700434529XXXunregisterConsumer1808118735 -> InnerLogger1066893677XXXwarn424332965;
+MQClientInstance700434529XXXunregisterConsumer1808118735 -> MQClientAPIImpl1527982467XXXunregisterClient1452686320;
+MQClientInstance700434529XXXunregisterConsumer1808118735 -> Slf4jLogger2118845798XXXinfo658265366;
+MQClientInstance700434529XXXunregisterConsumer1808118735 -> Slf4jLogger2118845798XXXwarn1808118735;
+MQClientInstance700434529XXXunregisterConsumer1808118735 -> Slf4jLogger2118845798XXXwarn424332965;
+MonitorService2000019609XXXmain0999713441 -> MonitorService2000019609XXXshutdown0;
+MonitorService2000019609XXXmain1859653459 -> MonitorService2000019609XXXmain0999713441;
+MonitorService2000019609XXXshutdown0 -> DefaultMQPushConsumer633216551XXXshutdown0;
+PushConsumerImpl725268464XXXshutdown0 -> DefaultMQPushConsumer633216551XXXshutdown0;
+    
+}
+@enduml
